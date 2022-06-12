@@ -20,7 +20,7 @@ const HomeContainer = () => {
             <div className={styles.Home}>
                 <div className={styles.blueHome}>
                     <div className={`text-center ${styles.whiteHome}`}>
-                        {Object.keys(state.singleUser).length != 0 
+                        {Object.keys(state.singleUser).length !== 0 
                             ? <Card />
                             : <div>
                                 <h2>Click any button to get details of user.</h2>

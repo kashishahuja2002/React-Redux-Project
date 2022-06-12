@@ -8,14 +8,20 @@ const ButtonContainer = () => {
     const state = useSelector((store) => store );
     const dispatch = useDispatch();
 
-    const handleClick = (id) => {
+    // Single event listener for all buttons
+    const handleClick = (event) => {
+        const isButton = event.target.nodeName === 'BUTTON';
+        if (!isButton) {
+            return;
+        }
+        var id = event.target.value;
         dispatch(fetchSingle(id));
     }
 
     return (
-        <div className={styles.buttonContainer}>
+        <div onClick={handleClick} className={styles.buttonContainer}>
             {[...Array(state.allUsers.total)].map((e,i) =>
-                <Button className={styles.blueButton} key={i} onClick={() => handleClick(i+1)}>{i+1}</Button>
+                <Button className={styles.blueButton} key={i} value={i+1}>{i+1}</Button>
             )}
         </div>
     );
