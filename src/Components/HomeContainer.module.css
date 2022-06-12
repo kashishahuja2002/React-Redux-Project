@@ -1,0 +1,38 @@
+:root {
+    /* --lightBlue: #EBF6F7; */
+    --blue: #0C4D71;
+}
+
+.Home {
+    padding: 30px;
+    margin: 30px;
+}
+
+.blueHome {
+    padding: 50px;
+    background-color: var(--blue);
+    border-radius: 30px;
+}
+
+.whiteHome {
+    padding: 30px;
+    margin: 30px;
+    background-color: #fff;
+    border-radius: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .Home {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .blueHome {
+        padding: 20px;
+    }
+    
+    .whiteHome {
+        padding: 10px;
+        margin: 30px 10px;
+    }
+}

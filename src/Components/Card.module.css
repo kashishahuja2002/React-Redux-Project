@@ -1,0 +1,26 @@
+.avatar {
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin: 20px auto;
+}
+
+.avatar img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+}
+
+.email {
+    word-wrap: break-word;
+    margin: 25px 5px;
+}
+
+@media screen and (max-width: 576px) {
+    .avatar {
+        width: 80%;
+        height: 80%;
+    }
+}

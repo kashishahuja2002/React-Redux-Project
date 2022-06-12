@@ -1,0 +1,16 @@
+.buttonContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.blueButton {
+    background-color: var(--blue);
+    margin: 5px;
+}
+
+.blueButton:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
