@@ -4,13 +4,13 @@
     flex-wrap: wrap;
 }
 
-.blueButton {
-    background-color: var(--blue);
+.buttonContainer .blueButton {
+    background-color: var(--blue) !important;
     margin: 5px;
 }
 
-.blueButton:focus {
-    border: none;
-    outline: none;
-    box-shadow: none;
+.buttonContainer .blueButton:focus {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
