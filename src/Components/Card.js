@@ -8,10 +8,10 @@ const Card = () => {
     return(
         <div>
             <div className={styles.avatar}>
-                <img src={state.singleUser.avatar} alt="Avatar" />
+                <img src={state.users.singleUser.avatar} alt="Avatar" />
             </div>
-            <h2>{state.singleUser.first_name} {state.singleUser.last_name}</h2>
-            <h4 className={styles.email}>{state.singleUser.email}</h4>
+            <h2>{state.users.singleUser.first_name} {state.users.singleUser.last_name}</h2>
+            <h4 className={styles.email}>{state.users.singleUser.email}</h4>
         </div>
     );
 }

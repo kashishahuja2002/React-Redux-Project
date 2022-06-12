@@ -2,7 +2,7 @@ import React from "react";
 import styles from './ButtonContainer.module.css';
 import { Button } from "reactstrap";
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchSingle } from "../Actions/Actions";
+import { fetchSingle, isLoading } from "../Actions/Actions";
 
 const ButtonContainer = () => {
     const state = useSelector((store) => store );
@@ -15,12 +15,13 @@ const ButtonContainer = () => {
             return;
         }
         var id = event.target.value;
+        dispatch(isLoading(true));
         dispatch(fetchSingle(id));
     }
 
     return (
         <div onClick={handleClick} className={styles.buttonContainer}>
-            {[...Array(state.allUsers.total)].map((e,i) =>
+            {[...Array(state.users.allUsers.total)].map((e,i) =>
                 <Button className={styles.blueButton} key={i} value={i+1}>{i+1}</Button>
             )}
         </div>
